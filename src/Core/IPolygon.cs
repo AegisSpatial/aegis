@@ -49,5 +49,13 @@ namespace AEGIS
         /// The index is equal to or greater than the number of coordinates.
         /// </exception>
         new ILinearRing GetHole(Int32 index);
+
+        /// <summary>
+        /// Add a hole to the polygon.
+        /// </summary>
+        /// <param name="hole">The hole.</param>
+        /// <exception cref="System.ArgumentNullException">The hole is null.</exception>
+        /// <exception cref="System.ArgumentException">The reference system of the hole does not match the reference system of the polygon.</exception>
+        void AddHole(ILinearRing hole);
     }
 }

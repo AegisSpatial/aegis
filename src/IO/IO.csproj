@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>AEGIS.IO</AssemblyName>
+    <RootNamespace>AEGIS.IO</RootNamespace>
+    <Authors>Roberto Giachetta et al.</Authors>
+    <Company>Eötvös Loránd University (ELTE)</Company>
+    <Description>Input/output library of the AEGIS framework.</Description>
+    <Copyright>Copyright Roberto Giachetta 2016-2021</Copyright>
+    <PackageLicenseUrl>http://opensource.org/licenses/ECL-2.0</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/robertogiachetta/aegis</PackageProjectUrl>
+    <Version>0.1.0</Version>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+
+    <CodeAnalysisRuleSet>..\analyzer.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>True</DebugSymbols>
+    <DocumentationFile>..\..\docs\AEGIS.IO.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Storage\Storage.csproj" />
+  </ItemGroup>
+</Project>
